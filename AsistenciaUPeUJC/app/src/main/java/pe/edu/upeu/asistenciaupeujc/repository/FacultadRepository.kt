@@ -9,6 +9,7 @@ import kotlinx.coroutines.launch
 import pe.edu.upeu.asistenciaupeujc.data.local.dao.FacultadDao
 import pe.edu.upeu.asistenciaupeujc.data.remote.RestFacultad
 import pe.edu.upeu.asistenciaupeujc.modelo.Facultad
+import pe.edu.upeu.asistenciaupeujc.modelo.Materialesx
 import pe.edu.upeu.asistenciaupeujc.utils.TokenUtils
 import javax.inject.Inject
 
@@ -19,9 +20,10 @@ interface FacultadRepository {
 
     fun buscarFacultadId(id:Long): LiveData<Facultad>
 
-    suspend fun Facultad.insertarFacultad():Boolean
+    suspend fun insertarFacultad(facultad: Facultad):Boolean
 
     suspend fun modificarRemoteFacultad(facultad: Facultad):Boolean
+
 }
 
 class FacultadRepositoryImp @Inject constructor(
@@ -54,10 +56,12 @@ class FacultadRepositoryImp @Inject constructor(
     }
 
 
-    override suspend fun Facultad.insertarFacultad(facultad: Facultad):Boolean{
 
+    override suspend fun insertarFacultad(facultad: Facultad):Boolean{
+        //Log.i("FAC", "${facultad.facultadId}")
         return restFacultad.insertarFacultad(TokenUtils.TOKEN_CONTENT, facultad).body()!=null
     }
+
 
     override suspend fun modificarRemoteFacultad(facultad: Facultad):Boolean{
         var dd:Boolean=false

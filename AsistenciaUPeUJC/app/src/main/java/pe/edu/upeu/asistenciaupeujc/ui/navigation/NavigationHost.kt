@@ -15,6 +15,8 @@ import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.Pantalla4
 import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.Pantalla5
 import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.actividad.ActividadForm
 import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.actividad.ActividadUI
+import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.facultad.FacultadForm
+import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.facultad.FacultadUI
 import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.login.LoginScreen
 import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.materialesx.MaterialesxForm
 import pe.edu.upeu.asistenciaupeujc.ui.presentation.screens.materialesx.MaterialesxUI
@@ -77,6 +79,18 @@ fun NavigationHost(
                 navBackStackEntry -> var matId=navBackStackEntry.arguments?.getString("matId")
             requireNotNull(matId)
             MaterialesxForm(text = matId, darkMode = darkMode, navController =navController )
+        }
+
+        composable(Destinations.FacultadUI.route){
+            FacultadUI(navegarEditarAct = {newText->navController.navigate(Destinations.FacultadForm.passId(newText))}, navController =navController )
+        }
+
+        composable(Destinations.FacultadForm.route, arguments = listOf(navArgument("facId"){
+            defaultValue="facId"
+        })){
+                navBackStackEntry -> var facId=navBackStackEntry.arguments?.getString("facId")
+            requireNotNull(facId)
+            FacultadForm(text = facId, darkMode = darkMode, navController =navController )
         }
     }
 }

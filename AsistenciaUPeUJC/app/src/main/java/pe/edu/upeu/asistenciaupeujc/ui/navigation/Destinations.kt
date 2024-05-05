@@ -41,4 +41,12 @@ sealed class Destinations(
         }
     }
 
+    object FacultadUI: Destinations("facultadUI","Adm. Facultades", Icons.Filled.DateRange)
+
+    object FacultadForm: Destinations("FacultadForm?facId={facId}", "Form Facultad", Icons.Filled.Add){
+        fun passId(facId:String?):String{
+            return "facultadForm?facId=$facId"
+        }
+    }
+
 }
