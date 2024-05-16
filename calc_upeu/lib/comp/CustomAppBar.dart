@@ -25,10 +25,16 @@ class _CustomAppBarState extends State<CustomAppBar>{
           onPressed: (){
             setState(() {
               AppTheme.useLightMode = !AppTheme.useLightMode;
-              AppTheme.themeData = ThemeData(
-                  colorSchemeSeed: AppTheme.colorOptions[AppTheme.colorSelected],
-                  useMaterial3: AppTheme.useMaterial3,
-                  brightness: AppTheme.useLightMode ? Brightness.light : Brightness.dark);
+              if(AppTheme.useLightMode==true){
+                AppTheme.themeDataLight=ThemeData(useMaterial3: AppTheme.useMaterial3,
+                    colorScheme: AppTheme.colorOptionsShemeL[AppTheme.colorSelected]
+                );
+              }else{
+                AppTheme.themeDataDark=ThemeData(useMaterial3: AppTheme.useMaterial3,
+                    colorScheme: AppTheme.colorOptionsShemeD[AppTheme.colorSelected]
+                );
+              }
+
               accionx();
             });
           },
@@ -39,10 +45,15 @@ class _CustomAppBarState extends State<CustomAppBar>{
           onPressed: (){
             setState(() {
               AppTheme.useMaterial3 = !AppTheme.useMaterial3;
-              AppTheme.themeData = ThemeData(
-                  colorSchemeSeed: AppTheme.colorOptions[AppTheme.colorSelected],
-                  useMaterial3: AppTheme.useMaterial3,
-                  brightness: AppTheme.useLightMode ? Brightness.light : Brightness.dark);
+              if(AppTheme.useLightMode==true){
+                AppTheme.themeDataLight=ThemeData(useMaterial3: AppTheme.useMaterial3,
+                    colorScheme: AppTheme.colorOptionsShemeL[AppTheme.colorSelected]
+                );
+              }else{
+                AppTheme.themeDataDark=ThemeData(useMaterial3: AppTheme.useMaterial3,
+                    colorScheme: AppTheme.colorOptionsShemeD[AppTheme.colorSelected]
+                );
+              }
             });
             accionx();
           },
@@ -53,7 +64,7 @@ class _CustomAppBarState extends State<CustomAppBar>{
           shape:
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           itemBuilder: (context) {
-            return List.generate(AppTheme.colorOptions.length, (index) {
+            return List.generate(AppTheme.colorOptionsLD.length, (index) {
               return PopupMenuItem(
                 value: index,
                 child: Wrap(
@@ -61,13 +72,13 @@ class _CustomAppBarState extends State<CustomAppBar>{
                     Padding(
                       padding: const EdgeInsets.only(left: 10),
                       child: Icon(
-                        index == AppTheme.colorSelected? Icons.color_lens: Icons.color_lens_outlined,
-                        color: AppTheme.colorOptions[index],
+                        index == AppTheme.colorOptionsLD? Icons.color_lens: Icons.color_lens_outlined,
+                        color: AppTheme.colorOptionsLD[index],
                       ),
                     ),
                     Padding(
                         padding: const EdgeInsets.only(left: 20),
-                        child: Text(AppTheme.colorText[index]))
+                        child: Text(AppTheme.colorTextLD[index]))
                   ],
                 ),
                 onTap: (){
@@ -79,10 +90,16 @@ class _CustomAppBarState extends State<CustomAppBar>{
           },
           onSelected: (valor){
             setState(() {
-              AppTheme.themeData = ThemeData(
-                  colorSchemeSeed: AppTheme.colorOptions[coloS],
-                  useMaterial3: AppTheme.useMaterial3,
-                  brightness: AppTheme.useLightMode ? Brightness.light : Brightness.dark);
+              if(AppTheme.useLightMode==true){
+                AppTheme.themeDataLight=ThemeData(useMaterial3: AppTheme.useMaterial3,
+                    colorScheme: AppTheme.colorOptionsShemeL[AppTheme.colorSelected]
+                );
+              }else{
+                AppTheme.themeDataDark=ThemeData(useMaterial3: AppTheme.useMaterial3,
+                    colorScheme: AppTheme.colorOptionsShemeD[AppTheme.colorSelected]
+                );
+              }
+
             });
             accionx();
           },

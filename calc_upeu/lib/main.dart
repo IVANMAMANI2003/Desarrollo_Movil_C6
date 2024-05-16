@@ -120,8 +120,9 @@ class CalcAppState extends State<CalcApp>{
 
       debugShowCheckedModeBanner: false,
       title: 'Calculator',
-      themeMode: AppTheme.useLightMode ? ThemeMode.light : ThemeMode.dark,
-      theme: AppTheme.themeData,
+        themeMode: AppTheme.useLightMode ? ThemeMode.light : ThemeMode.dark,
+        theme: AppTheme.themeDataLight,//Fin Agregado
+        darkTheme: AppTheme.themeDataDark,
       home: Scaffold(
         appBar: CustomAppBar(accionx: accion as Function),
         body: SingleChildScrollView(
