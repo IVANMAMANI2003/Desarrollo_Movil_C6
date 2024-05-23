@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "625836636601",
+    "firebase_url": "https://loginappmovil-7f038-default-rtdb.firebaseio.com",
+    "project_id": "loginappmovil-7f038",
+    "storage_bucket": "loginappmovil-7f038.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625836636601:android:999f69b424ea1925141e68",
+        "android_client_info": {
+          "package_name": "pe.edu.upeu.asistencia_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625836636601-91qgg71bdahh8p0l4dqpltc0srju2b99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPkVQdPPCQ_JfXnNCz5cjvTvYI3e32kN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625836636601-91qgg71bdahh8p0l4dqpltc0srju2b99.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "625836636601-4pek12ecfntojrj8f1lt40eo9akhra1v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pe.edu.upeu.asistenciaApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625836636601:android:f2e5f19d6a09224d141e68",
+        "android_client_info": {
+          "package_name": "pe.edu.upeu.asistencia_appx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625836636601-269qhpl1psc01d93eeovmv5l1ka44f1f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pe.edu.upeu.asistencia_appx",
+            "certificate_hash": "e243a826dd4eefa720a335d8dc3bcc3b73dbe709"
+          }
+        },
+        {
+          "client_id": "625836636601-91qgg71bdahh8p0l4dqpltc0srju2b99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPkVQdPPCQ_JfXnNCz5cjvTvYI3e32kN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625836636601-91qgg71bdahh8p0l4dqpltc0srju2b99.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "625836636601-4pek12ecfntojrj8f1lt40eo9akhra1v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pe.edu.upeu.asistenciaApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
